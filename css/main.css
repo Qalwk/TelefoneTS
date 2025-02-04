@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(./reset.css);
+
+* {
+    font-family: Open Sans;
+}
+
+:root {
+    --primary-color: #1946BA; /* Пример синего цвета */
+    --secondary-color: #38C463; /* Пример зеленого цвета */
+    --third-color: #F21F5B;
+    --white-color: #ffffff; 
+    --black-color: #000000;
+    --grey-color: #C4C4C4;
+    --light-grey-color: #F2F2F2;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.header__title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.header__description {
+
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.action__inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.input {
+    background-color: var(--grey-color);
+    border: solid var(--primary-color) 1px;
+    height: 2rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.error {
+    border: solid var(--third-color) 1px;
+    color: var(--third-color);
+}
+
+.input:focus{
+    background-color: var(--white-color);
+    color: var(--black-color);
+    /* border: solid var(--primary-color) 1px;  */
+}
+
+.action__btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.button {
+    width: 7rem;
+    height: 2rem;
+    background-color: var(--secondary-color);
+    border: solid var(--grey-color) 1px;
+    border-radius: 2rem;
+    color: var(--white-color);
+}
+
+.btn__delete {
+    background-color: var(--third-color);
+}
+
+.button:active {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+}
+
+.btn__delete:active {
+    background-color: var(--white-color);
+    color: var(--third-color);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    column-gap: 3rem;
+    margin-top: 2rem;
+}
+
+.list__column-el {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    flex-direction: column;
+    border: solid var(--grey-color) 1px;
+    background-color: var(--light-grey-color);
+}
+
+p {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.list__column-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--third-color);
+    color: var(--white-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.element__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid var(--grey-color) 1px;
+}
+
+.unvisible {
+    display: none;
+}
+
+.active {
+    display: none;
+}
+
+.element__edit {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    padding: 1.5rem 1.5rem;
+    justify-content: space-between;
+    background-color: var(--grey-color);
+    z-index: 100;
+}
+
+.element__edit-input {
+    width: 12rem;
+    height: 2rem;
+    border: solid var(--primary-color) 1px;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
